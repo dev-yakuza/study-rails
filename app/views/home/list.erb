@@ -3,6 +3,7 @@ table, th, td {
   border: 1px solid black;
 }
 </style>
+<a href="/form">Create New Post</a>
 <table>
     <thead>
         <tr>
@@ -16,7 +17,7 @@ table, th, td {
         <tr>
             <td><%= post.title %></td>
             <td><%= post.content %></td>
-            <td></td>
+            <td><a href="/modify/<%= post.id %>">modify</a></td>
         </tr>
         <% end %>
     </tbody>

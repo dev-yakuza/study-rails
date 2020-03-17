@@ -20,4 +20,17 @@ class HomeController < ApplicationController
     def list
         @posts = Post.all
     end
+
+    def modify
+        @post = Post.find(params[:id])
+    end
+
+    def update
+        post = Post.find(params[:id])
+        post.title = params[:title]
+        post.content = params[:content]
+        post.save
+
+        redirect_to '/list'
+    end
 end
