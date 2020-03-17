@@ -33,4 +33,10 @@ class HomeController < ApplicationController
 
         redirect_to '/list'
     end
+
+    def delete
+        Post.destroy(params[:id])
+
+        redirect_to '/list'
+    end
 end

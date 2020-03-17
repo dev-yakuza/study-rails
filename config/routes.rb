@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get '/modify/:id', to: 'home#modify'
   post '/update/:id', to: 'home#update'
+
+  get '/delete/:id', to: 'home#delete'
 end

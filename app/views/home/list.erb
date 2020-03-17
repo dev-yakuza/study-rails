@@ -17,7 +17,10 @@ table, th, td {
         <tr>
             <td><%= post.title %></td>
             <td><%= post.content %></td>
-            <td><a href="/modify/<%= post.id %>">modify</a></td>
+            <td>
+                <a href="/modify/<%= post.id %>">modify</a><br/>
+                <a href="/delete/<%= post.id %>">delete</a><br/>
+            </td>
         </tr>
         <% end %>
     </tbody>
